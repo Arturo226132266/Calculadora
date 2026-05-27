@@ -1,32 +1,19 @@
-num1 = float(input("Ingresa el primer número: "))
-num2 = float(input("Ingresa el segundo número: "))
+Para usar esta calculadora es necesario seguir estos pasos.
+1. Entrada de datos (Pedir los números)
+"Primero, el programa le pide al usuario que ingrese dos números por teclado usando la instrucción input(). Como Python recibe todo como texto, usamos float() para convertir ese texto en números con decimales, lo que permite sumar tanto enteros como decimales."
 
-print("\nSelecciona una operación:")
-print("1. Suma")
-print("2. Resta")
-print("3. Multiplicación")
-print("4. División")
+2. Menú de opciones
+"Después, el programa despliega un menú visual en la consola con print(), mostrando las cuatro operaciones disponibles (Suma, Resta, Multiplicación y División). El usuario elige una opción escribiendo el número correspondiente (1, 2, 3 o 4)."
 
-opcion = input("Ingresa el número de la operación: ")
+3. Toma de decisiones (Estructura if-elif-else)
+"Finalmente, usamos condiciones para saber qué operación ejecutar:
 
-if opcion == "1":
-    resultado = num1 + num2
-    print("Resultado:", resultado)
+Si elige 1, se suman los números.
 
-elif opcion == "2":
-    resultado = num1 - num2
-    print("Resultado:", resultado)
+Si elige 2, se restan.
 
-elif opcion == "3":
-    resultado = num1 * num2
-    print("Resultado:", resultado)
+Si elige 3, se multiplican.
 
-elif opcion == "4":
-    if num2 != 0:
-        resultado = num1 / num2
-        print("Resultado:", resultado)
-    else:
-        print("Error: no se puede dividir entre cero")
+Si elige 4, se dividen; pero aquí agregamos una validación importante: un if que revisa que el segundo número no sea cero, evitando así que el programa truene por un error matemático.
 
-else:
-    print("Opción no válida")
+Si escribe cualquier otra cosa, el else final avisa que la opción no es válida."
